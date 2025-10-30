@@ -9,14 +9,12 @@
 		<title>Explicit - Accessible tooltips without hassle</title>
 
 		<link
-			href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&family=Barlow+Condensed:wght@700&display=swap"
 			rel="stylesheet"
+			href="https://boscop.fr/wp-content/themes/boscop/dist/app.css"
 		/>
 		<link rel="stylesheet" href="../src/index.css" />
 		<link rel="stylesheet" href="style.css" />
 		<link rel="icon" type="image/png" href="favicon.png" />
-
-		<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 
 		<meta property="og:title" content="Explicit" />
 		<meta
@@ -24,10 +22,10 @@
 			content="Turn title attributes into tooltips to make them accessible on hover and focus"
 		/>
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://explicit.empreintedigitale.fr" />
+		<meta property="og:url" content="https://explicit.boscop.fr" />
 		<meta
 			property="og:image"
-			content="https://explicit.empreintedigitale.fr/img/logo.svg"
+			content="https://explicit.boscop.fr/img/logo.svg"
 		/>
 		<meta property="og:locale" content="en_EN" />
 
@@ -40,76 +38,102 @@
 		/>
 		<meta
 			name="twitter:image"
-			content="https://explicit.empreintedigitale.fr/img/logo.svg"
+			content="https://explicit.boscop.fr/img/logo.svg"
 		/>
+
+		<style>
+			@font-face {
+				font-family: Outfit Variable;
+				font-style: normal;
+				font-display: swap;
+				font-weight: 200 900;
+				src: url('./outfit-variable.woff2') format('woff2');
+			}
+		</style>
 	</head>
 
 	<body>
-		<div id="app">
-			<div class="Container">
-				<header class="Header">
-					<h1 class="Header-title">Explicit</h1>
+		<ul class="SkipLinks Theme--secondary">
+			<li>
+				<a class="SkipLinks-link Button" href="#main">
+					Aller au contenu principal
+				</a>
+			</li>
+			<li>
+				<a class="SkipLinks-link Button" href="#footer">
+					Aller au pied de page
+				</a>
+			</li>
+		</ul>
 
-					<a
-						href="https://empreintedigitale.fr"
-						title="Empreinte Digitale - Créateur de vos solutions numériques responsables"
-					>
+		<div class="Surface Theme--primary">
+			<div class="Container Container--m">
+				<div class="Header">
+					<header class="Header-banner" role="banner">
 						<img
-							class="Header-empreinteLogo"
-							src="img/logo.svg"
-							alt="Empreinte Digitale - Créateur de vos solutions numériques responsables"
+							class="Header-logo"
+							src="./img/logo-boscop.svg"
+							alt="boscop"
 						/>
-					</a>
-				</header>
+					</header>
+				</div>
 
-				<main role="main">
-					<div class="Hero">
-						<p>
-							Turn title attributes into tooltips to make them accessible
-							on hover and focus.
-						</p>
-						<p>
-							<a href="https://github.com/empreinte-digitale/explicit">
-								See the documentation on GitHub
-							</a>
-						</p>
-					</div>
+				<div class="Section Section--padding-l">
+					<h1>Explicit</h1>
+					<p>
+						Turn title attributes into tooltips to make them accessible on
+						hover and focus.
+					</p>
+					<p>
+						<a href="https://github.com/boscop-fr/explicit">
+							See the documentation on GitHub
+						</a>
+					</p>
+				</div>
+			</div>
+		</div>
 
-					<h2 class="Inset-title">Example</h2>
+		<main
+			class="Section Section--padding-xl"
+			role="main"
+			id="main"
+			tabindex="-1"
+		>
+			<div class="Container">
+				<div class="RichText">
+					<h2>Example</h2>
 
 					<p>
 						Try hovering or focusing the buttons below for a quick
 						preview:
 					</p>
 
-					<div class="Inset">
-						<div class="Tiles" data-explicit-container>
-							<button class="Tile Button" title="Title for A">A</button>
-							<button class="Tile Button" title="Title for B">B</button>
-							<button class="Tile Button" title="Title for C">C</button>
-							<button class="Tile Button" title="Title for D">D</button>
-							<button class="Tile Button" title="Title for E">E</button>
-							<button
-								class="Tile Button"
-								title="A surprisingly long title for F so you can see how the browser handle reflows"
-							>
-								F
-							</button>
-							<button
-								class="Tile Button"
-								title="A surprisingly long title for G so you can see how the browser handle reflows"
-							>
-								G
-							</button>
-							<button class="Tile Button" title="Title for H">H</button>
-							<button class="Tile Button" title="Title for I">I</button>
-							<button class="Tile Button" title="Title for J">J</button>
-							<button class="Tile Button" title="Title for K">K</button>
-							<button class="Tile Button" title="Title for L">L</button>
-						</div>
+					<div class="Demo Theme--primary" data-explicit-container>
+						<button class="Tile Button" title="Title for A">A</button>
+						<button class="Tile Button" title="Title for B">B</button>
+						<button class="Tile Button" title="Title for C">C</button>
+						<button class="Tile Button" title="Title for D">D</button>
+						<button class="Tile Button" title="Title for E">E</button>
+						<button
+							class="Tile Button"
+							title="A surprisingly long title for F so you can see how the browser handle reflows"
+						>
+							F
+						</button>
+						<button
+							class="Tile Button"
+							title="A surprisingly long title for G so you can see how the browser handle reflows"
+						>
+							G
+						</button>
+						<button class="Tile Button" title="Title for H">H</button>
+						<button class="Tile Button" title="Title for I">I</button>
+						<button class="Tile Button" title="Title for J">J</button>
+						<button class="Tile Button" title="Title for K">K</button>
+						<button class="Tile Button" title="Title for L">L</button>
 					</div>
 
-					<h2 class="Inset-title">Accessibility</h2>
+					<h2>Accessibility</h2>
 
 					<p>
 						Explicit aims to make titles fully accessible by adhering to
@@ -141,7 +165,7 @@
 						</li>
 					</ul>
 
-					<h2 class="Inset-title">How it works</h2>
+					<h2>How it works</h2>
 
 					<p>
 						Explicit leverages the browser's layout engine by using CSS to
@@ -165,109 +189,50 @@
 						available space:
 					</p>
 
-					<div class="Inset">
-						<div class="Tiles ExplicitDebug" data-explicit-container>
-							<button class="Tile Button" title="Title for A">A</button>
-							<button class="Tile Button" title="Title for B">B</button>
-							<button class="Tile Button" title="Title for C">C</button>
-							<button class="Tile Button" title="Title for D">D</button>
-							<button class="Tile Button" title="Title for E">E</button>
-							<button
-								class="Tile Button"
-								title="A surprisingly long title for F so you can see how the browser handle reflows"
-							>
-								F
-							</button>
-							<button
-								class="Tile Button"
-								title="A surprisingly long title for G so you can see how the browser handle reflows"
-							>
-								G
-							</button>
-							<button class="Tile Button" title="Title for H">H</button>
-							<button class="Tile Button" title="Title for I">I</button>
-							<button class="Tile Button" title="Title for J">J</button>
-							<button class="Tile Button" title="Title for K">K</button>
-							<button class="Tile Button" title="Title for L">L</button>
-						</div>
+					<div
+						class="Demo Demo--debug Theme--primary"
+						data-explicit-container
+					>
+						<button class="Tile Button" title="Title for A">A</button>
+						<button class="Tile Button" title="Title for B">B</button>
+						<button class="Tile Button" title="Title for C">C</button>
+						<button class="Tile Button" title="Title for D">D</button>
+						<button class="Tile Button" title="Title for E">E</button>
+						<button
+							class="Tile Button"
+							title="A surprisingly long title for F so you can see how the browser handle reflows"
+						>
+							F
+						</button>
+						<button
+							class="Tile Button"
+							title="A surprisingly long title for G so you can see how the browser handle reflows"
+						>
+							G
+						</button>
+						<button class="Tile Button" title="Title for H">H</button>
+						<button class="Tile Button" title="Title for I">I</button>
+						<button class="Tile Button" title="Title for J">J</button>
+						<button class="Tile Button" title="Title for K">K</button>
+						<button class="Tile Button" title="Title for L">L</button>
 					</div>
-				</main>
-			</div>
-
-			<footer class="Footer" role="contentinfo">
-				<div class="Container">
-					<p>
-						<strong>Empreinte Digitale</strong>
-					</p>
-
-					<p></p>
-					<ul>
-						<li>
-							<a
-								href="https://empreintedigitale.fr"
-								title="Development (fr)"
-							>
-								Development
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://accessibilitenumerique.empreintedigitale.fr"
-								title="Accessibility (fr)"
-							>
-								Accessibility
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://cloud.empreintedigitale.fr"
-								title="Cloud (fr)"
-							>
-								Cloud
-							</a>
-						</li>
-						<li>
-							<a
-								href="https://rgpd.empreintedigitale.fr"
-								title="GDPR (fr)"
-							>
-								GDPR
-							</a>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<a href="mailto:contact@empreintedigitale.fr">E-mail</a>
-						</li>
-						<li>
-							<a href="https://twitter.com/empr1tedigitale">Twitter</a>
-						</li>
-						<li>
-							<a
-								href="https://linkedin.com/company/empreinte-digitale-angers"
-							>
-								LinkedIn
-							</a>
-						</li>
-						<li>
-							<a href="https://www.facebook.com/empr1tedigitale/">
-								Facebook
-							</a>
-						</li>
-						<li>
-							<a href="https://github.com/empreinte-digitale">GitHub</a>
-						</li>
-					</ul>
-					<p>
-						11 rue des Noyers
-						<br />
-						49000 Angers
-						<br />
-						France
-					</p>
 				</div>
-			</footer>
-		</div>
+			</div>
+		</main>
+
+		<footer
+			class="Footer Section Section--padding-l Surface Theme--tertiary"
+			role="contentinfo"
+			id="footer"
+			tabindex="-1"
+		>
+			<div class="Container">
+				<p lang="fr">
+					<strong><a href="https://boscop.fr">Boscop</a></strong>
+					| Numérique engagé
+				</p>
+			</div>
+		</footer>
 
 		<script type="module" src="../src/browser.ts"></script>
 	</body>
